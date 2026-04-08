@@ -6,17 +6,29 @@ class Factoryskills < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nicholasspencer/factoryskills/releases/download/v0.1.0/factoryskills-0.1.0-darwin-arm64.tar.gz"
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/391336405",
+          headers: [
+            "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
+            "Accept: application/octet-stream",
+          ]
       sha256 "5bd02b3c95007b38ac7802ae76dd9009a18354df6444e9b90f37df8175017a6f"
     else
-      url "https://github.com/nicholasspencer/factoryskills/releases/download/v0.1.0/factoryskills-0.1.0-darwin-amd64.tar.gz"
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/391336407",
+          headers: [
+            "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
+            "Accept: application/octet-stream",
+          ]
       sha256 "b6d49a773611d3330fb2947064da947de52fe177ab7361654910b1ee8b24f1c1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nicholasspencer/factoryskills/releases/download/v0.1.0/factoryskills-0.1.0-linux-amd64.tar.gz"
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/391336406",
+          headers: [
+            "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
+            "Accept: application/octet-stream",
+          ]
       sha256 "61e8a2dc6752bd524648b7409411b439369c0e6a18c97f7a063138b78aaa16b4"
     end
   end
