@@ -1,35 +1,35 @@
 class Factoryskills < Formula
   desc "Opinionated CLI for AI agent-driven development with beads"
   homepage "https://github.com/nicholasspencer/factoryskills"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/391336405",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/394278804",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "5bd02b3c95007b38ac7802ae76dd9009a18354df6444e9b90f37df8175017a6f"
+      sha256 "0d2a74a4563e9479cb6c9d52e57211c6c8a96b13a8ffca99164a39a5af080dd5"
     else
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/391336407",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/394278805",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "b6d49a773611d3330fb2947064da947de52fe177ab7361654910b1ee8b24f1c1"
+      sha256 "9b6d486b1a8b11e14ed66ba058e7b5aa6e2ddbea55ff01d517f8162b94b2d276"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/391336406",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/394278806",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "61e8a2dc6752bd524648b7409411b439369c0e6a18c97f7a063138b78aaa16b4"
+      sha256 "6b0f52cfcb5cf56abb52d54ed3f9c14e1bf6102a3117dd046c8d11e0793eb2d7"
     end
   end
 
