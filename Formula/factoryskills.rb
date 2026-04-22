@@ -38,6 +38,12 @@ class Factoryskills < Formula
   def install
     bin.install "bin/fs"
     (share/"factoryskills").install "share/factoryskills/skills"
+    # Bundled subagent definitions landed after v0.2.0; install only when
+    # the release tarball actually ships them so older pinned versions
+    # keep working.
+    if Dir.exist?("share/factoryskills/agents")
+      (share/"factoryskills").install "share/factoryskills/agents"
+    end
   end
 
   test do
