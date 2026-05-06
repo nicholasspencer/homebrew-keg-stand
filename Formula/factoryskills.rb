@@ -51,6 +51,6 @@ class Factoryskills < Formula
   end
 
   test do
-    assert_match "fs #{version}", shell_output("#{bin}/fs version")
+    assert_match "fs v#{version}", shell_output("#{bin}/fs version")
   end
 end
