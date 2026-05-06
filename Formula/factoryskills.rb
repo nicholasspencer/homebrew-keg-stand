@@ -6,37 +6,37 @@ class Factoryskills < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/413918787",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/413920251",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "9e4d61105ed141c7b71efec086a4f3bb43781c7e99099dbc5078ab93d47cea32"
+      sha256 "013f20066341f9e5af2344ddc95b7769e6548f612cbfd3d21c5644e59c8e5106"
     else
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/413918786",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/413920253",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "b892112edebf412cb676f271e3e44c9cfe7c65cca7f9b9c92283550af270e805"
+      sha256 "e211786f9cfcab247908b8315574031fe9483a0b057144b8eb0bb494f967d2a8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/413918784",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/413920252",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "2b728dc84b78149cc9b6888e67e1a0893b1b36a069dd8b6110581b5c21b540a3"
+      sha256 "058722fc8667d81fe0114420f5f94520873b9543e7f4d0aa798ef2231e6efef0"
     else
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/413918783",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/413920254",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "13ed9cc19ad79fdad3fcee2051f0c8874c383773f548ffeafe19e8234c9e5eb5"
+      sha256 "c57d4bfec1a57a150dc11d6d3d542d4067478cac4f83a6bdb9c08e7cb344d4da"
     end
   end
 
