@@ -1,42 +1,42 @@
 class Factoryskills < Formula
   desc "Opinionated CLI for AI agent-driven development with beads"
   homepage "https://github.com/nicholasspencer/factoryskills"
-  version "0.11.0"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/427506409",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/429868750",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "7a2b9882ac099d88ce02e60ce74b2ca90d2b72b698e61d51044c63fd9166f243"
+      sha256 "8ecf2ae5fc100188d4df9c6022644af5b3c2ece9ec9eacfb49820bc77bc6af9e"
     else
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/427506408",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/429868748",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "26ed68458a8cc9521799c807a3420ac0d63372ca432a8156ac5a9c0510e849ac"
+      sha256 "9300c37073f56f1684270792c24800e2ee986f9816e1f87486334e776d8b9c6b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/427506410",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/429868749",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "5cbaf29c9d7a86d32f43233cdd706852085bf61e2bdee1a849964d0de4de4067"
+      sha256 "d552036422e10fdde9bd2f38ac98e58184bbdd5926e85d7ae875c239cb5d3540"
     else
-      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/427506407",
+      url "https://api.github.com/repos/nicholasspencer/factoryskills/releases/assets/429868747",
           headers: [
             "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
             "Accept: application/octet-stream",
           ]
-      sha256 "6dd822e031206ae68c1a0edf8f0b3e5eb70d535aebbe57a869d347d394b81822"
+      sha256 "bb9928e48c2b3c88538dcab1c35389638f376b09d5a7ba818500a2f31cb24fb2"
     end
   end
 
@@ -47,6 +47,9 @@ class Factoryskills < Formula
     (share/"factoryskills").install "share/factoryskills/skills"
     if Dir.exist?("share/factoryskills/agents")
       (share/"factoryskills").install "share/factoryskills/agents"
+    end
+    if Dir.exist?("share/factoryskills/.beads/formulas")
+      (share/"factoryskills/.beads").install "share/factoryskills/.beads/formulas"
     end
   end
 
